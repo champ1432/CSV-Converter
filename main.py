@@ -34,3 +34,4 @@ for team in teamdata:
     csv_writer.writerow(team.values())
   
 data_file.close()
+print('done')
