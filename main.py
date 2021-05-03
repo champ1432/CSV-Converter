@@ -10,13 +10,13 @@ url = 'https://raw.githubusercontent.com/champ1432/RBL/master/ZGMH_League_2_2021
 json_url = urlopen(url)
 export = json.loads(json_url.read())
   
-teamdata = export['teams']
+teamdata = export['players']
   
 # now we will open a file for writing
-data_file = open('data_file.csv', 'w')
+data_pfile = open('data_file.csv', 'w')
   
 # create the csv writer object
-csv_writer = csv.writer(data_file)
+csv_writer = csv.writer(data_pfile)
   
 # Counter variable used for writing 
 # headers to the CSV file
@@ -33,5 +33,5 @@ for team in teamdata:
     # Writing data of CSV file
     csv_writer.writerow(team.values())
   
-data_file.close()
+data_pfile.close()
 print('done')
